@@ -1,3 +1,4 @@
+// link - https://leetcode.com/problems/find-peak-element/description/
 public class findPeakElement_162 {
     
     // Method 1: Binary Search (Original approach, finds one peak efficiently)
