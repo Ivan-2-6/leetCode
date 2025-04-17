@@ -98,6 +98,27 @@ public class findPeakElement_162 {
         
         return findPeakRecursive(arr, start, mid);
     }
+
+    // another one , but important one
+        public static int findPeakElement(int[] nums) {
+        int start = 0;
+        int end = nums.length - 1;
+
+        while (start < end) {
+            int mid = start + (end - start) / 2;
+
+            if (nums[mid] > nums[mid + 1]) {
+                // Peak is on the left side (including mid)
+                end = mid;
+            } else {
+                // Peak is on the right side
+                start = mid + 1;
+            }
+        }
+
+        // At the end, start == end pointing to a peak
+        return start;
+    }
     
     public static void main(String[] args) {
         int[] arr = {1, 2, 1, 3, 5, 7, 6, 4};
